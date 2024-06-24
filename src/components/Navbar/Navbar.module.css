@@ -1,0 +1,32 @@
+.nav{
+    border-bottom: 1px solid lightgray;
+    padding: 20px 10px
+}
+
+.nav ul{
+    margin: 0vw 15vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav ul li{
+    list-style: none;
+}
+
+.title{
+    font-family: 'Twinkle Star', cursive !important;
+    font-weight: 800;
+    color: #b44e4e !important
+}
+
+.nav ul li a{
+    color: #3d3d3d;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'Marcellus SC', serif;
+
+    &:hover{
+        transition: all 0.3s;
+        color: brown;
+    }
+}

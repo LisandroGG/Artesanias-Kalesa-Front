@@ -1,0 +1,3 @@
+export const GET_TRABAJOS = 'GET_TRABAJOS'
+export const POST_TRABAJO = 'POST_TRABAJO'
+export const DELETE_TRABAJO = 'DELETE_TRABAJO'
