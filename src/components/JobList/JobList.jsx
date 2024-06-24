@@ -2,6 +2,7 @@ import style from '../JobList/JobList.module.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { getTrabajos, deleteTrabajo } from '../../redux/actions'
+import { Link } from 'react-router-dom'
 
 const JobList = () => {
 
@@ -25,7 +26,10 @@ const JobList = () => {
                     {trabajo.imagen && <img src={`http://localhost:3000${trabajo.imagen}`} alt={trabajo.nombre} />}
                     <button onClick={() => handleDelete(trabajo.id)}>Borrar</button>
                 </div>)}
-
+                <Link
+            to='/admin'>
+                <button className={style.btn}>admin</button>
+            </Link>
         </div>
     )
 }
