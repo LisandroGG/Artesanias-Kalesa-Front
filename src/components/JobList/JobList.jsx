@@ -19,7 +19,7 @@ const JobList = () => {
     
     return(
         <div>
-            {trabajos.map(trabajo => <div key={trabajo.id}>
+            {trabajos.map(trabajo => <div key={trabajo.id} className={style.card}>
                     <h3>{trabajo.nombre}</h3>
                     <p>{trabajo.descripcion}</p>
                     {trabajo.imagen && <img src={`${import.meta.env.VITE_HOST}${trabajo.imagen}`} alt={trabajo.nombre} />}

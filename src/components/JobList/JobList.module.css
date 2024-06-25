@@ -2,6 +2,7 @@
     margin: 0vw 15vw;
 }
 
-.cards{
-    border: 1px solid blue;
+.card img{
+    width: 100px;
+    height: 100px;
 }
