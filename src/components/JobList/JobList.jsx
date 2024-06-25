@@ -22,7 +22,7 @@ const JobList = () => {
             {trabajos.map(trabajo => <div key={trabajo.id}>
                     <h3>{trabajo.nombre}</h3>
                     <p>{trabajo.descripcion}</p>
-                    {trabajo.imagen && <img src={`http://localhost:3000${trabajo.imagen}`} alt={trabajo.nombre} />}
+                    {trabajo.imagen && <img src={`${import.meta.env.VITE_HOST}${trabajo.imagen}`} alt={trabajo.nombre} />}
                     <button onClick={() => handleDelete(trabajo.id)}>Borrar</button>
                 </div>)}
         </div>
