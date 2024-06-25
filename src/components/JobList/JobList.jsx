@@ -22,7 +22,7 @@ const JobList = () => {
             {trabajos.map(trabajo => <div key={trabajo.id} className={style.card}>
                     <h3>{trabajo.nombre}</h3>
                     <p>{trabajo.descripcion}</p>
-                    {trabajo.imagen && <img src={`${import.meta.env.VITE_HOST}${trabajo.imagen}`} alt={trabajo.nombre} />}
+                    {trabajo.imagen && <img src={`${import.meta.env.VITE_HOST}${trabajo.imagen}`} alt={trabajo.nombre} loading="lazy" />}
                     <button onClick={() => handleDelete(trabajo.id)}>Borrar</button>
                 </div>)}
         </div>
