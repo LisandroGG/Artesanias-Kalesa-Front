@@ -1,6 +1,7 @@
 import style from '../Login/Login.module.css'
 import Admin from '../Admin/Admin.jsx'
 import { useState } from 'react'
+import Swal from 'sweetalert2'
 
 const Login = () => {
 
@@ -16,32 +17,47 @@ const Login = () => {
         if (username === admin_user && password === admin_password) {
             setPermiso(true);
         } else {
-            alert('Credenciales incorrectas');
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Credenciales incorrectas!",
+            });
         }
     };
 
-    return(
-        <>
-        {permiso ? <Admin /> : ''}
-        {permiso ? '' : 
-        <form onSubmit={handleSubmit} method='post'>
-                <input 
-                    type='text' 
-                    placeholder='Nombre de usuario' 
-                    value={username} 
-                    onChange={(e) => setUsername(e.target.value)} 
-                />
-                <input 
-                    type='password' 
-                    placeholder='Contraseña' 
-                    value={password} 
-                    onChange={(e) => setPassword(e.target.value)} 
-                />
-                <button type='submit'>Iniciar sesión</button>
-            </form>}
-            
-        </>
-    )
-}
+    return (
+        <div>
+            {permiso ? (
+                <Admin />
+            ) : (
+                <div className={style.login}>
+                    <form onSubmit={handleSubmit} method='post' className={style.form}>
+                        <h1>Artesanias Kalesa</h1>
+                        <span>Administrador</span>
+                        <fieldset>
+                        <legend>Usuario:</legend>
+                        <input 
+                            type='text' 
+                            placeholder='Nombre de usuario' 
+                            value={username} 
+                            onChange={(e) => setUsername(e.target.value)} 
+                        />
+                        </fieldset>
+                        <fieldset>
+                        <legend>Contraseña:</legend>
+                        <input 
+                            type='password' 
+                            placeholder='Contraseña' 
+                            value={password} 
+                            onChange={(e) => setPassword(e.target.value)} 
+                        />
+                        </fieldset>
+                        <button type='submit'>Iniciar sesión</button>
+                    </form>
+                </div>
+            )}
+        </div>
+    );
+};
 
 export default Login
