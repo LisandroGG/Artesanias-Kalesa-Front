@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { useDispatch } from 'react-redux';
-import { postTrabajo } from '../../redux/actions';
+import { getTrabajos, postTrabajo } from '../../redux/actions';
 
 const PostForm = () => {
     const dispatch = useDispatch();
@@ -25,14 +25,15 @@ const PostForm = () => {
         }
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         const formData = new FormData();
         formData.append('nombre', nombre);
         formData.append('descripcion', descripcion);
         formData.append('imagen', imagen);
 
-        dispatch(postTrabajo(formData));
+        await dispatch(postTrabajo(formData));
+        dispatch(getTrabajos())
 
         setNombre('');
         setDescripcion('');
