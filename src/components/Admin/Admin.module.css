@@ -1,0 +1,11 @@
+.head{
+    text-align: center;
+    border-bottom: 2px solid lightgray;
+    padding: 20px 10px
+}
+
+.head span{
+    font-size: 30px;
+    color: #b44e4e;
+    font-weight: 600;
+}
