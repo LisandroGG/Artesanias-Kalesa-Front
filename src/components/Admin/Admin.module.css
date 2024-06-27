@@ -1,6 +1,10 @@
+.content{
+    margin: 0vw 15vw;
+}
+
 .head{
     text-align: center;
-    border-bottom: 2px solid lightgray;
+    border-bottom: 1px solid lightgray;
     padding: 20px 10px
 }
 

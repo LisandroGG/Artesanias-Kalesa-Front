@@ -44,6 +44,7 @@ const Admin = () => {
                 </button>
                 </Link>
             </div>
+            <div className={style.content}>
             {view === 'crear' ? (
                 <PostForm />
             ) : (
@@ -57,7 +58,9 @@ const Admin = () => {
                 ))
             )}
         </div>
+        </div>
     );
+    
 };
 
 export default Admin
