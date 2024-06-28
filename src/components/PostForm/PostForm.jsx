@@ -64,11 +64,11 @@ const PostForm = () => {
                 <h1>Subir un trabajo</h1>
                 <fieldset>
                     <legend>Nombre del trabajo</legend>
-                <input type="text" name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} autoComplete='off'/>
+                <input type="text" name="nombre" value={nombre} onChange={(e) => setNombre(e.target.value)} autoComplete='off' maxLength='26'/>
                 </fieldset>
                 <fieldset>
                     <legend>Descripcion del trabajo</legend>
-                <input type="text" name="descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} autoComplete='off'/>
+                <input type="text" name="descripcion" value={descripcion} onChange={(e) => setDescripcion(e.target.value)} autoComplete='off' maxLength='40'/>
                 </fieldset>
                 <p>Imagen del trabajo:</p>
                 <input type="file" name="imagen" accept=".png, .jpg, .jpeg" onChange={handleImageChange} key={Date.now()}/>
