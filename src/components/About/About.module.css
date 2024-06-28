@@ -1,8 +1,55 @@
 .about{
-    min-height: 77vh;
-    max-height: 77vh;
-    border: 2px solid blue;
+    min-height: 76.5vh;
+    max-height: 78vh;
     padding: 10px;
     margin: 0vw 15vw;
     margin-top: 3vh;
+}
+
+.content{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about h2{
+    font-size: 35px;
+}
+
+.about h2 span{
+    color: #b44e4e;
+}
+
+.about p{
+    font-size: 25px;
+}
+
+@media (975px > width){
+    .about h2{
+        font-size: 30px;
+    }
+    .about p{
+        font-size: 20px;
+    }
+}
+
+@media (674px > width){
+    
+    .about h2{
+        font-size: 28px;
+    }
+    .about p{
+        font-size: 18px;
+    }
+}
+
+@media (443px > width){
+    .about h2{
+        font-size: 25px;
+    }
+    .about p{
+        font-size: 15px;
+    }
 }
