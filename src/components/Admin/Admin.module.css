@@ -13,3 +13,85 @@
     color: #b44e4e;
     font-weight: 600;
 }
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 2vh;
+}
+
+.buttons button{
+    width: 80px;
+    font-size: 15px;
+    border: none;
+    background-color: #b44e4e;
+    color: white;
+    border-radius: 5px;
+
+    &:hover{
+        background-color: #953b3d;
+        transition: 0.5s all;
+        cursor: pointer;
+    }
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 5vh;
+    justify-content: center;
+    overflow: auto;
+    overflow-y: scroll;
+}
+
+.card{
+    width: 240px;
+    height: 350px;
+    padding: 10px;
+    background-color: rgb(245, 242, 242);
+    box-shadow: 2px 2px 2px 2px #efefef;
+    border: 1px solid lightgray;
+}
+
+.card img{
+    border-radius: 3px;
+    max-width: 240px;
+    min-width: 240px;
+    min-height: 250px;
+    max-height: 250px;
+}
+
+.card h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.card p{
+    font-size: 13px;
+    color: gray;
+}
+
+.card button{
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    background-color: #b44e4e;
+    color: white;
+    float:  right;
+    margin-top: 30px;
+
+    &:hover{
+        background-color: #953b3d;
+        transition: 0.5s all;
+        cursor: pointer;
+    }
+}
+
+@media (775px > width) {
+    .content{
+        margin: 0vw 0vw;
+    }
+}

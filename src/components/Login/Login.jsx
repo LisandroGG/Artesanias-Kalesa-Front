@@ -10,7 +10,7 @@ const Login = () => {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
-    const [permiso, setPermiso] = useState(false);
+    const [permiso, setPermiso] = useState(true);
 
     const handleSubmit = (e) => {
         e.preventDefault();
