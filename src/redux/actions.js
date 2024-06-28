@@ -7,7 +7,7 @@ const DEPLOY_URL = process.env.VITE_HOST
 export const getTrabajos = () => {
     return async(dispatch) => {
         try {
-            const { data } = await axios.get(`${LOCAL}/trabajos`)
+            const { data } = await axios.get(`${DEPLOY_URL}/trabajos`)
 
             return dispatch({
                 type: GET_TRABAJOS,
@@ -22,7 +22,7 @@ export const getTrabajos = () => {
 export const postTrabajo = (formData) => {
     return async(dispatch) => {
         try {
-            const { data } = await axios.post(`${LOCAL}/trabajos`, formData, {
+            const { data } = await axios.post(`${DEPLOY_URL}/trabajos`, formData, {
                 header: {
                     'Content-type': 'multipart/form-data'
                 }
@@ -40,7 +40,7 @@ export const postTrabajo = (formData) => {
 export const deleteTrabajo = (idTrabajo) => {
     return async(dispatch) => {
         try {
-            const response = await axios.delete(`${LOCAL}/trabajos/${idTrabajo}`)
+            const response = await axios.delete(`${DEPLOY_URL}/trabajos/${idTrabajo}`)
             const data = response.data;
 
             return dispatch({
