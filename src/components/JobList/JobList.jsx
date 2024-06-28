@@ -13,13 +13,14 @@ const JobList = () => {
     }, [dispatch])
     
     return(
-        <div>
+        <div className={style.cards}>
             {trabajos.map(trabajo => <div key={trabajo.id} className={style.card}>
+                    {trabajo.imagen && <img src={trabajo.imagen} alt={trabajo.nombre} />}
                     <h3>{trabajo.nombre}</h3>
                     <p>{trabajo.descripcion}</p>
-                    {trabajo.imagen && <img src={trabajo.imagen} alt={trabajo.nombre} />}
-                </div>)}
-        </div>
+                </div>
+            )}
+            </div>
     )
 }
 

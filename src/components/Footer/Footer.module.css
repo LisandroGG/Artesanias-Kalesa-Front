@@ -1,0 +1,33 @@
+.footer{
+    border-top: 1px solid lightgray;
+    margin-top: 3vh;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    margin: 0vw 15vw;
+    padding: 8px 10px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+.content a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.content span{
+    font-size: 20px;
+    color: #b44e4e;
+    font-weight: 600;
+}
+
+@media (800px > width){
+    .content{
+        margin: 0vw 0vw;
+    }
+}

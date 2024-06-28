@@ -1,0 +1,8 @@
+.about{
+    min-height: 77vh;
+    max-height: 77vh;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 0vw 15vw;
+    margin-top: 3vh;
+}

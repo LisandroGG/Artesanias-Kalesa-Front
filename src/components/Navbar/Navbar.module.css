@@ -1,6 +1,6 @@
 .nav{
     border-bottom: 1px solid lightgray;
-    padding: 20px 10px
+    padding: 20px 10px;
 }
 
 .nav ul{
@@ -16,7 +16,9 @@
 .title{
     font-family: 'Twinkle Star', cursive !important;
     font-weight: 800;
-    color: #b44e4e !important
+    color: #b44e4e !important;
+    font-size: 1.5em;
+    text-decoration: none;
 }
 
 .nav ul li a{
@@ -27,5 +29,36 @@
     &:hover{
         transition: all 0.3s;
         color: brown;
+    }
+}
+
+.btns{
+    display: flex;
+    gap: 20px
+}
+
+@media (800px > width){
+    .nav ul{
+        margin: 0vw 2vw;
+    }
+}
+
+@media (604px > width){
+
+    .nav{
+        padding: 10px 0px;
+    }
+    .nav ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title{
+        font-size: 35px !important;
+    }
+
+    .nav ul li{
+        font-size: 0.9em;
     }
 }

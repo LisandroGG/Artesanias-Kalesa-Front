@@ -1,8 +1,49 @@
-.main{
+.cards{
     margin: 0vw 15vw;
+    min-height: 77vh;
+    max-height: 77vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 3vh;
+    justify-content: center;
+    overflow: auto;
+    overflow-y: scroll;
+    padding: 10px;
+}
+
+.card{
+    width: 260px;
+    height: 330px;
+    padding: 10px;
+    background-color: rgb(245, 242, 242);
+    box-shadow: 2px 2px 2px 2px #efefef;
+    border: 1px solid lightgray;
 }
 
 .card img{
-    width: 100px;
-    height: 100px;
+    border-radius: 3px;
+    max-width: 260px;
+    min-width: 260px;
+    min-height: 260px;
+    max-height: 260px;
+}
+
+.card h3{
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+}
+
+.card p{
+    font-size: 13px;
+    color: gray;
+}
+
+
+@media (866px > width) {
+    .cards{
+        margin: 0vw 0vw;
+        margin-top: 3vh;
+    }
 }

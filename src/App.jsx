@@ -7,11 +7,11 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
 
-  
   return (
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Main />}></Route>
+          <Route path='/about' element={<Main />} />
           <Route path='/admin' element={<Login />}></Route>
         </Routes>
       </BrowserRouter>
