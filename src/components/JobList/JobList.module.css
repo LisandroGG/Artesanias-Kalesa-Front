@@ -12,6 +12,18 @@
     padding: 10px;
 }
 
+.loading{
+    margin: 0vw 15vw;
+    min-height: 77vh;
+    max-height: 77vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 3vh;
+    padding: 10px;
+}
+
 .card{
     width: 260px;
     height: 330px;
